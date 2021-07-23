@@ -1,6 +1,6 @@
 Feature: windows calculator
 
-Scenario:
+Scenario: calc automation
 * robot { window: 'Calculator' }
 * click('Clear')
 * click('One')
