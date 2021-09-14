@@ -10,6 +10,8 @@ Feature: w3 school log in with multiple user id and pw
     * input('#current-password', pw)
     * click('{^span}Log in')
     * delay(5000)
+    * screenshot()
+    * match driver.url =="https://my-learning.w3schools.com/"
  		* click('{}Log out')
  		* delay(9000)
     
