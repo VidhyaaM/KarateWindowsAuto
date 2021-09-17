@@ -10,11 +10,13 @@ Feature: w3 school log in with multiple user id and pw
     * input('#current-password', pw)
     * click('{^span}Log in')
     * delay(5000)
+    * waitFor('#profile-name')
+    * match ('#profile-name') == name
  		* click('{}Log out')
  		* delay(9000)
     
   Examples:
-    | user                   | pw            |
-    | vidhyaa@sequoiaat.com  | Lesewe1233    |
-  	| vidhyaa1@sequoiaat.com | Newuser1234   |
+    | user                   | pw            | name          |
+    | vidhyaa@sequoiaat.com  | Lesewe1233    | Vidhyaa M     |
+  	| vidhyaa1@sequoiaat.com | Newuser1234   | Vid           |
   		
