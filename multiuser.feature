@@ -11,7 +11,7 @@ Feature: w3 school log in with multiple user id and pw
     * click('{^span}Log in')
     * delay(5000)
     * waitFor('#profile-name')
-    * match ('#profile-name') == name
+    * match text('#profile-name') == name
     * click('{}Log out')
     * delay(9000)
     
