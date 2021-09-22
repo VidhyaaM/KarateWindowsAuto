@@ -1,33 +1,20 @@
 Feature: windows calculator
 
-Scenario: calc automation
+  Scenario Outline: calc automation using loop
+  
 * configure robot = { highlight: true }
 * robot { fork: 'C:/Windows/System32/calc.exe' }
-
-#Addition operation
-* click('Clear')&&click('One')&&click('Plus')&&click('Two')&&click('Equals')
-* match locate('#CalculatorResults').name == 'Display is 3'
-* screenshot()
-
-#Subraction operation input using mouse click
 * click('Clear')
-* click('Two')&&click('Minus')&&click('Two')&&click('Equals')
-* match locate('#CalculatorResults').name == 'Display is 0'
+* click(value1)&&click(operation)&&click(value2)&&click('Equals')
+#* input(value1)&&input(Key.(operation))&&input(value2)&&click('Equals')
+* match locate('#CalculatorResults').name == result
 * screenshot()
-
-#multiplication operation input using keyboard click
-* click('Clear')
-#* click('Two')&&click('Into')&&click('Two')
-* input('2')&&input(Key.MULTIPLY)&&input('2')
-* click('Equals')
-* match locate('#CalculatorResults').name == 'Display is 4'
-* screenshot()
-
-#division operation input using keyboard click
-* click('Clear')
-* input('4')&&input(Key.DIVIDE)&&input('2')
-* click('Equals')
-* match locate('#CalculatorResults').name == 'Display is 2'
-* screenshot()
-
 * click('Close Calculator')
+
+
+  Examples:
+    | operation   | value1    | value2    |  result        | 
+    | Plus        | Two		    | Two       |  Display is 4  |
+    | Minus       | Two		    | Two       |  Display is 0  | 
+    | Multiply    | Two			  | Two       |  Display is 4  |
+    | Divide      | Two		    | Two       |  Display is 1  |
