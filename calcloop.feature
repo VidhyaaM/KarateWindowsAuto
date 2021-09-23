@@ -1,6 +1,6 @@
  Feature: windows calculator
  
- # value1 and value2 are constants used for the operations
+  # value1 and value2 are constants used for the operations
  @tag1
  Scenario Outline: calc automation using loop
  
