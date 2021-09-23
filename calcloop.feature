@@ -10,8 +10,8 @@
 * match locate('#CalculatorResults').name == result
 * screenshot()
   Examples:
-    | operation   | value1    | value2    |  result        | 
-    | Plus        | Two		    | Two       |  Display is 4  |
-    | Minus       | Two		    | Two       |  Display is 0  | 
-    | Multiply    | Two			  | Two       |  Display is 4  |
-    | Divide      | Two		    | Two       |  Display is 1  |
+    | operation   | value1     | value2    |  result        | 
+    | Plus        | Two		      | Two       |  Display is 4  |
+    | Minus       | Two		      | Two       |  Display is 0  | 
+    | Multiply    | Two			     | Two       |  Display is 4  |
+    | Divide      | Two		      | Two       |  Display is 1  |
