@@ -15,11 +15,11 @@ Scenario Outline: calc automation using loop
 #* input(value1)&&input(Key.(operation))&&input(value2)&&click('Equals')
 * match locate('#CalculatorResults').name == result
 * screenshot()
-	  Examples:
-	     | operation | value1 | value2| result        |   
-         | Plus      | Two	  | Two   | Display is 4  |
-	     | Minus     | Two	  | Two   | Display is 0  | 
-	     | Multiply  | Two	  | Two   | Display is 4  |
-	     | Divide    | Two	  | Two   | Display is 1  |
+Examples:
+| operation | value1  | value2| result        |   
+| Plus      | Two	  | Two   | Display is 4  |
+| Minus     | Two	  | Two   | Display is 0  | 
+| Multiply  | Two	  | Two   | Display is 4  |
+| Divide    | Two	  | Two   | Display is 1  |
 
 
